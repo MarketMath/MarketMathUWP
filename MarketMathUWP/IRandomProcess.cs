@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace MarketMathUWP
 {
-    public interface IStockProcess
+    public interface IRandomProcess
     {
         double GetValue(double deltaTime);
-        double GetValueAt(double time);
     }
 }
