@@ -22,9 +22,19 @@ namespace MarketMathUWP
         /// </summary>
         public double Vola { get; set; }
 
-        public double CurrentValue { get; set; } = 1;
+        private double CurrentValue { get; set; } = 1;
 
         Random rand = new Random();
+
+        /// <summary>
+        /// Creates a new geometric brownian motion and sets the start position of that motion to 
+        /// the given startValue parameter.
+        /// </summary>
+        /// <param name="startValue">Starting position of the geometric brownian motion</param>
+        public GeometricBrownianMotion(double startValue)
+        {
+            CurrentValue = startValue;
+        }
 
         /// <summary>
         /// Returns the new value of the stochastic process after delta time has passed.
